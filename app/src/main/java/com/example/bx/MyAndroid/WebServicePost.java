@@ -20,11 +20,10 @@ import java.util.Map;
  */
 
 public class WebServicePost {
-    private  static String IP = "192.168.2.113:8080";
 
     public static String executeHttpPost(String username, String password){
         try{
-            String path = "http://" + IP + "/MyServer/Register";
+            String path = "http://" + Content.IP + "/MyServer/Register";
 
             Map<String, String> params = new HashMap<String, String>();
             params.put("username", username);

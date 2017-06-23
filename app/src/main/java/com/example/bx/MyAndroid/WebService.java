@@ -11,14 +11,13 @@ import java.net.URL;
  */
 
 public class WebService {
-    private  static  String IP = "192.168.2.113:8080";
 
     public static String executeHttpGet(String username, String password){
         HttpURLConnection conn = null;
         InputStream is = null;
 
         try{
-            String path = "http://" + IP + "/MyServer/Login";
+            String path = "http://" + Content.IP + "/MyServer/Login";
             path = path + "?username=" + username + "&password=" + password;
 
             conn = (HttpURLConnection)new URL(path).openConnection();
